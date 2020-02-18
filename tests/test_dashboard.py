@@ -99,5 +99,6 @@ def test_exercisemetrics(test_client, runestone_db_tools, test_user, test_user_1
 
 # TODO:
 # grades
+def test_grades(test_client, runestone_db_tools, test_user, test_user_1):
 # questiongrades
 # better testing of index conten
