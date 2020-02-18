@@ -100,5 +100,10 @@ def test_exercisemetrics(test_client, runestone_db_tools, test_user, test_user_1
 # TODO:
 # grades
 def test_grades(test_client, runestone_db_tools, test_user, test_user_1):
+    course_3 = runestone_db_tools.create_course(
+        "test_course_3", base_course="test_course_1"
+    )
+    test_instructor_1 = test_user("test_instructor_1", "password_1", course_3)
+    test_instructor_1.make_instructor()
 # questiongrades
 # better testing of index conten
