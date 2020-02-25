@@ -102,6 +102,9 @@ def test_grades(test_client, runestone_db_tools, test_user, test_user_1):
     test_instructor_1 = test_user("test_instructor_1", "password_1", course_3)
     test_instructor_1.make_instructor()
 
+    test_instructor_1.login()
+    db = runestone_db_tools.db
+
 # TODO:
 # grades
 # questiongrades
