@@ -103,7 +103,19 @@ def test_grades(test_client, runestone_db_tools, test_user, test_user_1):
     test_instructor_1.make_instructor()
 
     test_instructor_1.login()
-    db = runestone_db_tools.db
+    test_instructor_1.hsblog(
+        event="mChoice",
+        act="answer:1:correct",
+        answer="1",
+        correct="T",
+        div_id="subc_b_1",
+        course="test_course_3",
+    )
+
+    res = test_instructor_1.test_client.validate(
+        "dashboard/grades",
+        "Responses by Student",
+        data=dict(chapter="test_chapter_1", id="subc_b_1")
 
 # TODO:
 # grades
