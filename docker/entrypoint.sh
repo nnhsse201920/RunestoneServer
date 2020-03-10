@@ -27,7 +27,7 @@ fi
 
 # For development make sure we are up to date with the latest from github.
 if [ $WEB2PY_CONFIG == "development" ]; then
-    pip install --upgrade git+git://github.com/RunestoneInteractive/RunestoneComponents.git
+    pip install --upgrade git+git://github.com/nnhsse201920/RunestoneComponents.git@dark
 fi
 
 # Initialize the database
